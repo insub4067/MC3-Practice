@@ -6,15 +6,3 @@
 //
 
 import Foundation
-
-struct Feed {
-    let owner: User
-    let contributor: User?
-    let title: String
-    let description: String
-    let audio: String
-    let image: String
-    var isOriginalFeed: Bool {
-        contributor == nil
-    }
-}

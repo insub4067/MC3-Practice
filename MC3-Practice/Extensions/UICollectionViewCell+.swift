@@ -7,10 +7,3 @@
 
 import Foundation
 import UIKit
-
-extension UICollectionViewCell {
-
-    static var identifier: String {
-        NSStringFromClass(self.classForCoder()).components(separatedBy: ".").last!
-    }
-}
