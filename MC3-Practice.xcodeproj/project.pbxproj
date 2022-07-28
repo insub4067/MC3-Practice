@@ -14,7 +14,7 @@
 		C65552FC289154D600D64024 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65552FB289154D600D64024 /* HomeViewController.swift */; };
 		C65552FE289154DE00D64024 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65552FD289154DE00D64024 /* UserViewController.swift */; };
 		C65553012891574A00D64024 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65553002891574A00D64024 /* FeedCollectionViewCell.swift */; };
-		C65553042891575A00D64024 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65553032891575A00D64024 /* Extensions.swift */; };
+		C65553042891575A00D64024 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65553032891575A00D64024 /* UICollectionViewCell+.swift */; };
 		C6555307289158A600D64024 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6555306289158A600D64024 /* User.swift */; };
 		C6555309289158DB00D64024 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6555308289158DB00D64024 /* Feed.swift */; };
 		C655530B28915AD800D64024 /* FeedCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C655530A28915AD800D64024 /* FeedCollectionReusableView.swift */; };
@@ -31,7 +31,7 @@
 		C65552FB289154D600D64024 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C65552FD289154DE00D64024 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		C65553002891574A00D64024 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
-		C65553032891575A00D64024 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C65553032891575A00D64024 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 		C6555306289158A600D64024 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C6555308289158DB00D64024 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		C655530A28915AD800D64024 /* FeedCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -74,21 +74,21 @@
 				C65553052891589A00D64024 /* Models */,
 				C65553022891575000D64024 /* Extensions */,
 				C65552FF2891573500D64024 /* Views */,
-				C65552FA289154AE00D64024 /* TabBar */,
+				C65552FA289154AE00D64024 /* ViewControllers */,
 				C65552ED2891516400D64024 /* Assets.xcassets */,
 				C65552F22891516400D64024 /* Info.plist */,
 			);
 			path = "MC3-Practice";
 			sourceTree = "<group>";
 		};
-		C65552FA289154AE00D64024 /* TabBar */ = {
+		C65552FA289154AE00D64024 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				C65552F8289153B500D64024 /* MainTabBarController.swift */,
 				C65552FB289154D600D64024 /* HomeViewController.swift */,
 				C65552FD289154DE00D64024 /* UserViewController.swift */,
 			);
-			path = TabBar;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		C65552FF2891573500D64024 /* Views */ = {
@@ -103,7 +103,7 @@
 		C65553022891575000D64024 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C65553032891575A00D64024 /* Extensions.swift */,
+				C65553032891575A00D64024 /* UICollectionViewCell+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 				C65552E72891516300D64024 /* SceneDelegate.swift in Sources */,
 				C655530E28917E2700D64024 /* DataManager.swift in Sources */,
 				C65552FC289154D600D64024 /* HomeViewController.swift in Sources */,
-				C65553042891575A00D64024 /* Extensions.swift in Sources */,
+				C65553042891575A00D64024 /* UICollectionViewCell+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
