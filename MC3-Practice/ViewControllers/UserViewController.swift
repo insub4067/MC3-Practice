@@ -23,8 +23,6 @@ class UserViewController: UIViewController {
         layout.itemSize = CGSize(width: surfaceLength, height: surfaceLength)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.headerReferenceSize = CGSize(width: UIScreen.main.bounds.width, height: 36)
 
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
 
@@ -124,6 +122,16 @@ extension UserViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
 
+    // Cell 클릭시
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        let vc = UIViewController()
+        vc.view.backgroundColor = .red
+
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
+    // header 생성
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
         guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: FeedCollectionReusableView.identifier, for: indexPath) as? FeedCollectionReusableView else { return UICollectionReusableView() }
@@ -141,7 +149,7 @@ extension UserViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension UserViewController: UIScrollViewDelegate {
 
-    // if scroll over bottom
+    // if user scrolled over bottom
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let position = scrollView.contentOffset.y
         if (feedCollectionView.contentSize.height - scrollView.frame.size.height + 120) < position {

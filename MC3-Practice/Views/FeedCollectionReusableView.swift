@@ -10,15 +10,10 @@ import UIKit
 class FeedCollectionReusableView: UICollectionReusableView {
 
     static let identifier = "FeedCollectionReusableView"
-
     private let imageHeight: CGFloat = 100
-
     private let stackHeight: CGFloat = 41
-
     private let stackWidth: CGFloat = 50
-
     private let leadingPadding: CGFloat = 20
-
     private let trailingPadding: CGFloat = -20
 
     // fullCoverView
