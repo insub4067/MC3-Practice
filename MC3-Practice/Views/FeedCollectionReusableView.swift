@@ -44,89 +44,85 @@ class FeedCollectionReusableView: UICollectionReusableView {
     }()
 
     // Owned Feed Indicator
-       private let ownedFeedStackView: UIStackView = {
+   private let ownedFeedStackView: UIStackView = {
 
-           let stackView = UIStackView()
-           stackView.axis = .vertical
-           stackView.distribution = .fill
-           stackView.translatesAutoresizingMaskIntoConstraints = false
+       let stackView = UIStackView()
+       stackView.axis = .vertical
+       stackView.distribution = .fill
+       stackView.translatesAutoresizingMaskIntoConstraints = false
 
-           return stackView
-       }()
+       return stackView
+   }()
 
-       private let ownedFeedLabel: UILabel = {
+   private let ownedFeedLabel: UILabel = {
 
-           let label = UILabel()
-           label.textAlignment = .center
-           label.translatesAutoresizingMaskIntoConstraints = false
-           label.text = "게시물"
+       let label = UILabel()
+       label.textAlignment = .center
+       label.translatesAutoresizingMaskIntoConstraints = false
+       label.text = "게시물"
 
-           return label
-       }()
+       return label
+   }()
 
-       private let numberOfOwnedFeedLabel: UILabel = {
+   private let numberOfOwnedFeedLabel: UILabel = {
 
-           let label = UILabel()
-           label.textAlignment = .center
-           label.translatesAutoresizingMaskIntoConstraints = false
-           label.text = "11"
-           label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+       let label = UILabel()
+       label.textAlignment = .center
+       label.translatesAutoresizingMaskIntoConstraints = false
+       label.text = "11"
+       label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
 
-           return label
-       }()
+       return label
+   }()
 
-       // Contributed Feed Indicator
-       private let contributedFeedStackView: UIStackView = {
+   // Contributed Feed Indicator
+   private let contributedFeedStackView: UIStackView = {
 
-           let stackView = UIStackView()
-           stackView.axis = .vertical
-           stackView.distribution = .fillProportionally
-           stackView.translatesAutoresizingMaskIntoConstraints = false
+       let stackView = UIStackView()
+       stackView.axis = .vertical
+       stackView.distribution = .fillProportionally
+       stackView.translatesAutoresizingMaskIntoConstraints = false
 
-           return stackView
-       }()
+       return stackView
+   }()
 
-       private let contributedFeedLabel: UILabel = {
+   private let contributedFeedLabel: UILabel = {
 
-           let label = UILabel()
-           label.textAlignment = .center
-           label.translatesAutoresizingMaskIntoConstraints = false
-           label.text = "기여"
+       let label = UILabel()
+       label.textAlignment = .center
+       label.translatesAutoresizingMaskIntoConstraints = false
+       label.text = "기여"
 
-           return label
-       }()
+       return label
+   }()
 
-       private let numberOfContributedFeedLabel: UILabel = {
+   private let numberOfContributedFeedLabel: UILabel = {
 
-           let label = UILabel()
-           label.textAlignment = .center
-           label.translatesAutoresizingMaskIntoConstraints = false
-           label.text = "14"
-           label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+       let label = UILabel()
+       label.textAlignment = .center
+       label.translatesAutoresizingMaskIntoConstraints = false
+       label.text = "14"
+       label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
 
-           return label
-       }()
+       return label
+   }()
 
-       // SegmentedControl
-       private let segmentedControl: UISegmentedControl = {
+   // SegmentedControl
+   private let segmentedControl: UISegmentedControl = {
 
-           let segment = UISegmentedControl(items: ["내피드", "기여"])
-           segment.selectedSegmentIndex = 0
-           segment.backgroundColor = .black
-           segment.tintColor = .gray
-           segment.translatesAutoresizingMaskIntoConstraints = false
+       let segment = UISegmentedControl(items: ["내피드", "기여"])
+       segment.selectedSegmentIndex = 0
+       segment.backgroundColor = .black
+       segment.tintColor = .gray
+       segment.translatesAutoresizingMaskIntoConstraints = false
 
-           return segment
-       }()
+       return segment
+   }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
         applyConstraints()
-    }
-
-    func configure(with user: User) {
-        profileImageView.image = UIImage(named: user.profileImage)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -135,6 +131,10 @@ class FeedCollectionReusableView: UICollectionReusableView {
 }
 
 extension FeedCollectionReusableView {
+
+    func configure(with user: User) {
+        profileImageView.image = UIImage(named: user.profileImage)
+    }
 
     private func configureView() {
         [fullCoverView, segmentedControl]
