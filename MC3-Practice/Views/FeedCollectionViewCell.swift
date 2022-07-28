@@ -24,16 +24,16 @@ class FeedCollectionViewCell: UICollectionViewCell {
         applyConstraints()
     }
 
-    func configure(with feed: Feed) {
-        imageView.image = UIImage(named: feed.image)
-    }
-
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
 extension FeedCollectionViewCell {
+
+    func configure(with feed: Feed) {
+        imageView.image = UIImage(named: feed.image)
+    }
 
     private func configureView() {
         [imageView]
